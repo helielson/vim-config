@@ -25,6 +25,11 @@ Manual instalation
 
    	wget -qO - http://github.com/helielson/vim-config/tarball/master | tar -xzvf -
 
+2. Install the dependences::
+
+   	pip install jedi
+   	pip install flake8
+
 2. In your ~/.vimrc, add the following line::
 
    	source ~/path/to/vimrc/vimrc
@@ -32,3 +37,11 @@ Manual instalation
 3. Fetch submodules::
 
    	git submodule update --init
+
+
+Dependences
+===========
+
+It's necessary to install some dependences for running some vim plugins:
+- The jedi-vim plugin depends of the jedi lib.
+- The vim-flake8 plugin depends of flake8 lib.
