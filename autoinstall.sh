@@ -10,7 +10,10 @@ CURRENT_DIR=`pwd`
 ln -s $CURRENT_DIR/vim ~/.vim
 ln -s $CURRENT_DIR/vim/vimrc ~/.vimrc
 
-printf "[ \033[00;34mInstalando plugins...\033[0m ] $1\n\n"
+printf "[ \033[00;34mInstalling plugins...\033[0m ] $1\n\n"
 git submodule update --init
+
+printf "[ \033[00;34mInstalling Jedi lib (https://github.com/davidhalter/jedi)...\033[0m ] $1\n\n"
+pip install jedi
 
 printf "\r\033[2K[ \033[00;32mInstallation finished. Enjoy your vim :)\033[0m ] $1\n"
