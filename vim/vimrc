@@ -49,6 +49,9 @@ map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimr
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
 
+" calls flake8 plugin even the file is saved
+autocmd BufWritePost *.py call Flake8()
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   let g:ackprg = 'ag --nogroup --column'

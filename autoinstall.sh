@@ -16,4 +16,7 @@ git submodule update --init
 printf "[ \033[00;34mInstalling Jedi lib (https://github.com/davidhalter/jedi)...\033[0m ] $1\n\n"
 pip install jedi
 
+printf "[ \033[00;34mInstalling flake8 lib (https://github.com/singingwolfboy/flake8)...\033[0m ] $1\n\n"
+pip install flake8
+
 printf "\r\033[2K[ \033[00;32mInstallation finished. Enjoy your vim :)\033[0m ] $1\n"
