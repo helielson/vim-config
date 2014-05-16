@@ -42,7 +42,7 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 nmap <leader>b :ctrlpbuffer<cr>
 nmap <leader>t :ctrlp<cr>
-nmap <leader>C :ctrlpclearcache<cr>:ctrlp<cr>
+nmap <leader>C :ClearAllCtrlPCaches<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<cr>
 map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimrc reloaded'"<cr>
 
