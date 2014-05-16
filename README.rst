@@ -34,7 +34,11 @@ Manual instalation
    	cd vim-config
    	git submodule update --init
 
-4. Install the dependences::
+4. Copy the content of `vim` folder to your `.vim` folder::
+
+    cp -r vim/* ~/.vim
+
+5. Install the dependences::
 
    	pip install jedi
    	pip install flake8
