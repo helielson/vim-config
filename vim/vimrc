@@ -1,0 +1,83 @@
+set ts=2
+set sw=2
+set softtabstop=2
+set nowrap
+
+" loads unbundle plugin
+:runtime bundle/vim-unbundle/unbundle.vim
+
+set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
+set backspace=2                                              " fix broken backspace in some setups
+set backupcopy=yes                                           " see :help crontab
+set clipboard=unnamed                                        " yank and paste with the system clipboard
+set directory-=.                                             " don't store swapfiles in the current directory
+set encoding=utf-8
+set expandtab                                                " expand tabs to spaces
+
+" search sets
+set ignorecase                                               " case-insensitive search
+set incsearch                                                " search as you type
+set smartcase                                                " case-sensitive search if any caps
+
+set laststatus=2                                             " always show statusline
+set list                                                     " show trailing whitespace
+set listchars=tab:▸\ ,trail:▫
+set number                                                   " show line numbers
+set ruler                                                    " show where you are
+set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc,*.pyc
+set wildmode=longest,list,full
+
+" enable basic mouse behavior such as resizing buffers.
+" set mouse=a
+
+" don't highlight current line
+set nocursorline
+
+" keyboard shortcuts
+inoremap jj <ESC>
+let mapleader = ','
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+nmap <leader>b :ctrlpbuffer<cr>
+nmap <leader>t :ctrlp<cr>
+nmap <leader>C :ctrlpclearcache<cr>:ctrlp<cr>
+nmap <leader><space> :call whitespace#strip_trailing()<cr>
+map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimrc reloaded'"<cr>
+
+" plugin settings
+let g:ctrlp_match_window = 'order:ttb,max:20'
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --column'
+
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " use ag in ctrlp for listing files. lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" uses monokai colorsqueme
+colorscheme monokai
+
+" use workspace dir as default
+cd ~/workspace
+
+" enable git gutter
+let g:gitgutter_enabled = 1
+
+noremap! jj <ESC>
+
+" remove empty spaces in the end of line before save file
+autocmd! bufwritepre * call whitespace#strip_trailing()
+
+" increase height of focused screen part
+set winheight=5
+set winminheight=5
+set winheight=9999
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =

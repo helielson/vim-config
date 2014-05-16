@@ -1,0 +1,9 @@
+[submodule "vim/bundle/vim-unbundle"]
+	path = vim/bundle/vim-unbundle
+	url = git@github.com:sunaku/vim-unbundle.git
+[submodule "vim/bundle/monokai"]
+	path = vim/bundle/monokai
+	url = git@github.com:lsdr/monokai.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
