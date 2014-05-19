@@ -27,7 +27,7 @@ Manual instalation
 
 2. In your ~/.vimrc, add the following line (PROJECT_DIR is the directory the project was cloned)::
 
-   	source PROJECT_DIR/vim/vimrc
+   	source PROJECT_DIR/vim-config/vim/vimrc
 
 3. Fetch submodules::
 
