@@ -48,9 +48,9 @@ map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimr
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
+let g:flake8_ignore="E501"
 
-" calls flake8 plugin even the file is saved
-autocmd BufWritePost *.py call Flake8()
+autocmd BufWritePost *.py call Flake8()                      " calls flake8 plugin even the file is saved
 
 " uses monokai colorsqueme
 colorscheme monokai
