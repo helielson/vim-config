@@ -1,10 +1,10 @@
-set ts=2
-set sw=2
-set softtabstop=2
-set nowrap
-
 " loads unbundle plugin
 :runtime bundle/vim-unbundle/unbundle.vim
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set nowrap
 
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2                                              " fix broken backspace in some setups
@@ -26,6 +26,7 @@ set number                                                   " show line numbers
 set ruler                                                    " show where you are
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc,*.pyc
 set wildmode=longest,list,full
+set hlsearch                                                 " enables search highlight
 
 " enable basic mouse behavior such as resizing buffers.
 " set mouse=a
@@ -43,6 +44,7 @@ map <c-l> <c-w>l
 nmap <leader>b :ctrlpbuffer<cr>
 nmap <leader>t :ctrlp<cr>
 nmap <leader>C :ClearAllCtrlPCaches<cr>
+nmap <leader>m :noh<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<cr>
 map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimrc reloaded'"<cr>
 
