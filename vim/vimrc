@@ -52,6 +52,7 @@ nnoremap <silent> <leader>s :set spell!<CR>                  " toggle spelling c
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:flake8_ignore="E501"
+let g:user_emmet_leader_key='<c-s>'                          " redefine the emmet trigger key
 
 autocmd BufWritePost *.py call Flake8()                      " calls flake8 plugin even the file is saved
 
