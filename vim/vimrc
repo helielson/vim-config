@@ -81,3 +81,7 @@ set winheight=9999
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+"
+" removes the scrollbars
+set guioptions-=r
+set guioptions-=L
