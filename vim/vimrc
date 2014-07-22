@@ -58,8 +58,11 @@ let g:user_emmet_leader_key='<c-s>'                          " redefine the emme
 
 autocmd BufWritePost *.py call Flake8()                      " calls flake8 plugin even the file is saved
 
-" uses monokai colorsqueme
-colorscheme monokai
+" uncomment the line below for using the monokai colorsqueme
+" colorscheme monokai
+
+" uncomment the line below for using the desert colorsqueme
+colorscheme desert
 
 " use workspace dir as default
 cd ~/workspace
