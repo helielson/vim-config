@@ -66,9 +66,6 @@ colorscheme desert
 " use workspace dir as default
 cd ~/workspace
 
-" enable git gutter
-let g:gitgutter_enabled = 1
-
 noremap! jj <ESC>
 
 " remove empty spaces in the end of line before save file
