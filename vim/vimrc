@@ -47,8 +47,12 @@ nmap <leader>t :ctrlp<cr>
 nmap <leader>C :ClearAllCtrlPCaches<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<cr>
 map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimrc reloaded'"<cr>
-nnoremap <silent> <leader>m :noh<cr>                         " undo the highlight for the current highlighted text
-nnoremap <silent> <leader>s :set spell!<CR>                  " toggle spelling check
+
+" undo the highlight for the current highlighted text
+nnoremap <silent> <leader>a :noh<CR>
+
+" toggle spelling check
+nnoremap <silent> <leader>s :set spell!<CR>
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
