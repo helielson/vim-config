@@ -37,7 +37,7 @@ set nocursorline
 
 " keyboard shortcuts
 inoremap jj <ESC>
-let mapleader = ','
+let mapleader = '\'
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
