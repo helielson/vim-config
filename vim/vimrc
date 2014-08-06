@@ -55,6 +55,18 @@ nnoremap <silent> <leader>a :noh<CR>
 " toggle spelling check
 nnoremap <silent> <leader>s :set spell!<CR>
 
+" next diff in the diff tool
+nnoremap <leader>w ]c
+
+" previous diff in the diff tool
+nnoremap <leader>e [c
+
+" puts the diff to the anoter window
+nnoremap <leader>q :diffput<CR>
+
+" get the diff from another window
+nnoremap <leader>r :diffget<CR>
+
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:flake8_ignore="E501"
@@ -83,7 +95,7 @@ set winheight=9999
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
-"
+
 " removes the scrollbars
 set guioptions-=r
 set guioptions-=L
