@@ -10,7 +10,7 @@ printf "\033[2K\033[00;32mBackup created in the ~/.vimrc.bac file\033[0m\n\n"
 
 printf "\033[2K\033[00;32mDownloading project...\033[0m\n\n"
 cd $INSTALLATION_DIR
-git clone git@github.com:helielson/vim-config.git
+git clone https://github.com/helielson/vim-config.git
 cd vim-config
 
 CURRENT_DIR=`pwd`
