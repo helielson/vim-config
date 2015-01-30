@@ -1,6 +1,7 @@
 " loads unbundle plugin
 :runtime bundle/vim-unbundle/unbundle.vim
 
+syntax on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -23,7 +24,7 @@ set list                                                     " show trailing whi
 set listchars=tab:▸\ ,trail:▫
 set number                                                   " show line numbers
 set ruler                                                    " show where you are
-set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc,*.pyc
+set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc,*.pyc,*.bak,*.swp,*.class
 set wildmode=longest,list,full
 set hlsearch                                                 " enables search highlight
 set showmatch                                                " shows the cursor blinding when a closure is closed
@@ -38,16 +39,15 @@ set nocursorline
 " keyboard shortcuts
 inoremap jj <ESC>
 let mapleader = '\'
-map <c-h> <c-w>h
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
 nmap <leader>b :ctrlpbuffer<cr>
 nmap <leader>t :ctrlp<cr>
 nmap <leader>C :ClearAllCtrlPCaches<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<cr>
 map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimrc reloaded'"<cr>
 map <silent> <leader>2 :set sw=2<cr>:set sts=2<cr>:set ts=2<cr>
+
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_use_caching = 0
 
 " undo the highlight for the current highlighted text
 nnoremap <silent> <leader>a :noh<CR>
