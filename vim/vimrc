@@ -78,7 +78,7 @@ autocmd BufWritePost *.py call Flake8()                      " calls flake8 plug
 colorscheme desert
 
 " use workspace dir as default
-cd ~/workspace
+lcd .
 
 " removes the scrollbars
 set guioptions-=r
