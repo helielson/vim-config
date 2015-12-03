@@ -24,7 +24,7 @@ set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc,*.pyc,*.bak,*.swp,*
 set wildmode=longest,list,full
 set hlsearch                                                 " enables search highlight
 set showmatch                                                " shows the cursor blinding when a closure is closed
-
+set diffopt=vertical
 
 " enable basic mouse behavior such as resizing buffers.
 " set mouse=a
