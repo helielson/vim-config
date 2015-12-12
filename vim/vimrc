@@ -78,8 +78,7 @@ let g:user_emmet_leader_key='<c-s>'                          " redefine the emme
 
 autocmd BufWritePost *.py call Flake8()                      " calls flake8 plugin even the file is saved
 
-" if you are using macvim from brew ensure this colorscheme is in the `/usr/local/Cellar/macvim/${MACVIM_VERSION}/MacVim.app/Contents/Resources/vim/runtime/colors/` directory
-colorscheme cdesert
+colorscheme oneblue
 
 " use workspace dir as default
 lcd .
