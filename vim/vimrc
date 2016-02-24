@@ -58,6 +58,10 @@ let b:syntastic_checkers = ['eslint']
 " undo the highlight for the current highlighted text
 nnoremap <silent> <leader>a :noh<CR>
 
+" save current session
+" nnoremap <silent> <leader> mksession! session.vim<CR>
+:command SS mksession! session.vim
+
 " toggle spelling check
 nnoremap <silent> <leader>s :set spell!<CR>
 
