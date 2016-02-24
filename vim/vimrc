@@ -137,6 +137,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'drn/zoomwin-vim'
 NeoBundle 'lepture/vim-jinja'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'groenewege/vim-less'
 " ultisnips
 NeoBundle 'SirVer/ultisnips'
