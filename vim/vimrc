@@ -48,10 +48,12 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0   " ag is fast enough that CtrlP doesn't need to cache
 
 let g:syntastic_check_on_open = 0
-let g:syntastic_enable_signs = 0
+let g:syntastic_enable_signs = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let b:syntastic_checkers = ['eslint']
 
 " undo the highlight for the current highlighted text
 nnoremap <silent> <leader>a :noh<CR>
@@ -130,6 +132,7 @@ NeoBundle 'nvie/vim-flake8'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'drn/zoomwin-vim'
 NeoBundle 'lepture/vim-jinja'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'groenewege/vim-less'
 " ultisnips
 NeoBundle 'SirVer/ultisnips'
