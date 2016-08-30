@@ -40,6 +40,9 @@ set foldmethod=indent        " faster than syntax
 set foldlevelstart=1              " start unfolded
 set foldlevel=1
 
+" disables esc timeout
+set timeoutlen=1000 ttimeoutlen=0
+
 " keyboard shortcuts
 inoremap jj <ESC>
 let mapleader = '\'
@@ -104,6 +107,17 @@ nnoremap <leader>q :diffput<CR>
 
 " get the diff from another window
 nnoremap <leader>r :diffget<CR>
+
+" tmux
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-w>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-w>j :TmuxNavigateDown<cr>
+nnoremap <silent> <c-w>k :TmuxNavigateUp<cr>
+nnoremap <silent> <c-w>l :TmuxNavigateRight<cr>
+nnoremap <silent> <c-w>\ :TmuxNavigatePrevious<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
+
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
