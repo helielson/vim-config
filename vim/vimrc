@@ -52,7 +52,7 @@ nmap <leader>C :ClearAllCtrlPCaches<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<cr>
 map <silent> <leader>v :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 'vimrc reloaded'"<cr>
 map <silent> <leader>2 :set sw=2<cr>:set sts=2<cr>:set ts=2<cr>
-map <silent> <S-D-CR> :ZoomWin<CR>
+map <silent> <leader>z :ZoomWin<CR>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Find merge conflict markers
