@@ -34,11 +34,16 @@ set diffopt=vertical
 " don't highlight current line
 set nocursorline
 
-" fold
+" folding
 set foldtext=CustomFoldText()
 set foldmethod=indent        " faster than syntax
 set foldlevelstart=1              " start unfolded
 set foldlevel=1
+
+map <silent> z1 :set foldlevel=1<CR>
+map <silent> z2 :set foldlevel=2<CR>
+map <silent> z3 :set foldlevel=3<CR>
+map <silent> z0 :set foldlevel=0<CR>
 
 " disables esc timeout
 set timeoutlen=1000 ttimeoutlen=0
