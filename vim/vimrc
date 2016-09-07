@@ -192,6 +192,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 
 call neobundle#end()
 
