@@ -63,10 +63,6 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
 
-" Easy Motion
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-
 " Stupid shift key fixes
 command! -bang -nargs=* -complete=file W w<bang> <args>
 command! -bang -nargs=* -complete=file Wq wq<bang> <args>
@@ -191,7 +187,6 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 
 call neobundle#end()
