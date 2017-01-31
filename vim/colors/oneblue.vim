@@ -82,13 +82,14 @@ let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
 
 let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "8" }  " let s:black = { "gui": "#212C31", "cterm": "235", "cterm16": "8" }
+let s:blue_black = { "gui": "#273338", "cterm": "235", "cterm16": "8" }  " let s:black = { "gui": "#212C31", "cterm": "235", "cterm16": "8" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6670", "cterm": "59", "cterm16": "15" }
 let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
 let s:gutter_bg_grey = { "gui": "#2C313A", "cterm": "NONE", "cterm16": "NONE" }
 let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "15" } " TODO: This cterm16 value doesn't work great here
-let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
+let s:visual_grey = { "gui": "#3E4451", "cterm": "236", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 
@@ -167,7 +168,8 @@ call s:h("MatchParen", {}) " The character under the cursor or just before it, i
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text
+call s:h("Normal", { "fg": s:white, "bg": s:visual_black }) " normal text
+" call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text
 call s:h("Pmenu", {}) " Popup menu: normal item.
 call s:h("PmenuSel", { "bg": s:visual_grey }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:visual_grey }) " Popup menu: scrollbar.
