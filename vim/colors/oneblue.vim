@@ -5,6 +5,9 @@
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
 
+
+" The background blue: #1d2830
+
 " A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
 
 " +----------------+
