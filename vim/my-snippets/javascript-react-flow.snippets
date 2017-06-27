@@ -1,0 +1,48 @@
+snippet scomponent "Stateless component (js)" b
+type Props = {
+}
+export const ${1:Component}: SComponent<Props> =
+	({ $2 }) => (
+		${0:${VISUAL}}
+	);
+
+export default $1;
+endsnippet
+
+snippet classcomp "Class component (js)" b
+type Props = {
+};
+
+export const class ${1:Component} extends Component {
+	props: Props;
+
+	constructor(props: Props) {
+		super(props);
+		autoBind(this);
+	}
+
+	render() {
+		return (
+			${0:${VISUAL}}
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet createcontainer "Relay container (js)" b
+export default Relay.createContainer(${1:Component}, {
+	initialVariables: {
+		${2:${VISUAL}}
+	},
+
+	fragments: {
+		root: () => Relay.QL\`
+			fragment on RootApi {
+				${0:${VISUAL}}
+			}
+		\`,
+	},
+});
+endsnippet
