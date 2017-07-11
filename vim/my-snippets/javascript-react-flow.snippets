@@ -1,6 +1,4 @@
 snippet scomponent "Stateless component (js)" b
-type Props = {
-}
 export const ${1:Component}: SComponent<Props> =
 	({ $2 }) => (
 		${0:${VISUAL}}
@@ -9,11 +7,55 @@ export const ${1:Component}: SComponent<Props> =
 export default $1;
 endsnippet
 
-snippet classcomp "Class component (js)" b
+snippet initscomponent "init Stateless component (js)" b
+import React, { Component } from 'react';
+
+if (process.env.BROWSER) {
+	require('./scss/style');
+}
+
+type Props = {
+}
+
+export const ${1:Component}: SComponent<Props> =
+	({ $2 }) => (
+		${0:${VISUAL}}
+	);
+
+export default $1;
+endsnippet
+
+snippet classcomp "init Class component (js)" b
+export class ${1:Component} extends Component {
+	constructor(props: Props) {
+		super(props);
+		autoBind(this);
+	}
+
+	render() {
+		return (
+			<div className="$1">
+				${0:${VISUAL}}
+			</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet initclasscomp "init Class component (js)" b
+import React, { Component } from 'react';
+import autoBind from 'react-autobind';
+
+if (process.env.BROWSER) {
+	require('./scss/style');
+}
+
 type Props = {
 };
 
-export const class ${1:Component} extends Component {
+export class ${1:Component} extends Component {
 	props: Props;
 
 	constructor(props: Props) {
@@ -23,7 +65,9 @@ export const class ${1:Component} extends Component {
 
 	render() {
 		return (
-			${0:${VISUAL}}
+			<div className="$1">
+				${0:${VISUAL}}
+			</div>
 		);
 	}
 }
@@ -46,3 +90,43 @@ export default Relay.createContainer(${1:Component}, {
 	},
 });
 endsnippet
+
+snippet clog "Relay container (js)" b
+console.log('>>>>>>>>>>>>>>>>>>>', ${0});
+endsnippet
+
+snippet describe "describe test(js)" b
+describe('${1}', () => {
+	it('should ${2}', () => {
+		${0:${VISUAL}}
+	});
+});
+endsnippet
+
+snippet describecomp "describe component test(js)" b
+describe('<${1:Component} />', () => {
+	it('should render properly', () => {
+		${0:${VISUAL}}
+	});
+});
+endsnippet
+
+snippet initcomptest "init component test (js)" b
+import React from 'react';
+
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
+
+import ${1:Component} from '../';
+
+
+describe('<$1 />', () => {
+	describe('render', () => {
+		it('should render properly', () => {
+			const wrapper = shallow(<$1 />);
+			expect(shallowToJson({})).toMatchSnapshot();
+		});
+	});
+});
+endsnippet
+
