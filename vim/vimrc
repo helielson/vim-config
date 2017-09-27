@@ -184,6 +184,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" Prettier
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#trailing_comma = 'es5'
+
 " My Bundles
 
 NeoBundle 'kien/ctrlp.vim'
@@ -208,7 +212,8 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'fatih/vim-go'
-
+NeoBundle 'mitermayer/vim-prettier', {
+	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 call neobundle#end()
 
