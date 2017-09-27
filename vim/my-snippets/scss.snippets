@@ -1,0 +1,19 @@
+snippet initstyle "Initialize a style file (scss)" b
+@import '~@jusbrasil/mystique/scss/variables';
+
+.${1:Component} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet typograhy "Import typography from mystique (scss)" b
+@import '~@jusbrasil/mystique/scss/typography';
+endsnippet
+
+snippet textextend "typography extend placeholder (scss)" b
+@extend %text-${1:regular}-${2:14};
+endsnippet
+
+snippet calc "calc (scss)"
+calc(100${1:%} - #{${2}$spacer*2});
+endsnippet
