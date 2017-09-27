@@ -8,19 +8,20 @@ export default $1;
 endsnippet
 
 snippet initscomponent "init Stateless component (js)" b
-import React, { Component } from 'react';
+// @flow
+
+import React from 'react';
 
 if (process.env.BROWSER) {
-	require('./scss/style');
+	require('./scss/style.scss');
 }
 
 type Props = {
 }
 
-export const ${1:Component}: SComponent<Props> =
-	({ $2 }) => (
-		${0:${VISUAL}}
-	);
+export const ${1:Component}: SComponent<Props> = ({ $2 }) => (
+	${0:${VISUAL}}
+);
 
 export default $1;
 endsnippet
@@ -45,11 +46,13 @@ export default $1;
 endsnippet
 
 snippet initclasscomp "init Class component (js)" b
+// @flow
+
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 
 if (process.env.BROWSER) {
-	require('./scss/style');
+	require('./scss/style.scss');
 }
 
 type Props = {
@@ -92,7 +95,7 @@ export default Relay.createContainer(${1:Component}, {
 endsnippet
 
 snippet clog "Relay container (js)" b
-console.log('>>>>>>>>>>>>>>>>>>>', ${0});
+console.log('>>>>>>>>>>>>>>>>>>> $1', ${1});
 endsnippet
 
 snippet describe "describe test(js)" b
@@ -130,3 +133,26 @@ describe('<$1 />', () => {
 });
 endsnippet
 
+snippet div "div (js)" b
+<div className="${1:class-name}">
+	${0:${VISUAL}}
+</div>
+endsnippet
+
+
+snippet constructor "create constructor of class (js)" b
+import autoBind from 'react-autobind';
+constructor(props: Props) {
+	super(props);
+	autoBind(this);
+}
+endsnippet
+
+snippet Choose "create Choose/When/Otherwise statement" b
+<Choose>
+	<When condition={${0:${VISUAL}}}>
+	</When>
+	<Otherwise>
+	</Otherwise>
+</Choose>
+endsnippet
