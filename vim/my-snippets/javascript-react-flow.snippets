@@ -27,7 +27,7 @@ export default $1;
 endsnippet
 
 snippet classcomp "init Class component (js)" b
-export class ${1:Component} extends Component {
+export class ${1:Component} extends Component<Props> {
 	constructor(props: Props) {
 		super(props);
 		autoBind(this);
@@ -58,9 +58,7 @@ if (process.env.BROWSER) {
 type Props = {
 };
 
-export class ${1:Component} extends Component {
-	props: Props;
-
+export class ${1:Component} extends Component<Props> {
 	constructor(props: Props) {
 		super(props);
 		autoBind(this);
@@ -118,7 +116,6 @@ snippet initcomptest "init component test (js)" b
 import React from 'react';
 
 import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
 
 import ${1:Component} from '../';
 
@@ -127,7 +124,7 @@ describe('<$1 />', () => {
 	describe('render', () => {
 		it('should render properly', () => {
 			const wrapper = shallow(<$1 />);
-			expect(shallowToJson({})).toMatchSnapshot();
+			expect({}).toMatchSnapshot();
 		});
 	});
 });
@@ -155,4 +152,9 @@ snippet Choose "create Choose/When/Otherwise statement" b
 	<Otherwise>
 	</Otherwise>
 </Choose>
+endsnippet
+
+snippet dyimport "Create dyname webpack import" b
+import(/* webpackChunkName: "$1" */ '${1:modulePath}').then(module => {
+});
 endsnippet
