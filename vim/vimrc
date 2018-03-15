@@ -106,6 +106,9 @@ nnoremap <silent> <leader>a :noh<CR>
 " toggle spelling check
 nnoremap <silent> <leader>s :set spell!<CR>
 
+" open git diff
+nnoremap <leader>d :Gdiff<CR>
+
 " next diff in the diff tool
 nnoremap <leader>w ]c
 
