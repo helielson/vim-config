@@ -146,12 +146,21 @@ constructor(props: Props) {
 endsnippet
 
 snippet Choose "create Choose/When/Otherwise statement" b
+import { Choose, When, Otherwise } from 'jsx-control-statements';
 <Choose>
 	<When condition={${0:${VISUAL}}}>
 	</When>
 	<Otherwise>
 	</Otherwise>
 </Choose>
+endsnippet
+
+snippet For "create For statement" b
+import { For } from 'jsx-control-statements';
+declare var item: Object;
+declare var idx: number;
+<For each="${1:item}" of={${0:${VISUAL}}} index="idx">
+</For>
 endsnippet
 
 snippet dyimport "Create dyname webpack import" b
